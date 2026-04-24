@@ -791,7 +791,7 @@ export default function WaselApp(){
               <button onClick={()=>setPage('profile')} style={bs('secondary',{padding:'10px 22px',fontSize:'13px'})}>{t.editProfile}</button>
             </div>
           )}
-          {profile?.assessment_done&&(isCompany?(
+          {(profile?.assessment_done||isCompany)&&(isCompany?(
             <div style={cs({padding:'28px',border:`1px solid ${G.accent}15`})}>
               <div style={{fontSize:'24px',marginBottom:'14px'}}>👥</div>
               <div style={{fontWeight:800,color:G.textPri,marginBottom:'6px',fontSize:'16px'}}>{t.hrBoard}</div>
